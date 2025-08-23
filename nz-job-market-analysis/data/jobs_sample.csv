@@ -1,0 +1,6 @@
+date_posted,role,company,city,salary_min,salary_max,seniority,skills
+2025-08-01,Software Engineer,KiwiTech,Auckland,90000,120000,Mid,"Python;React;AWS"
+2025-08-03,Data Analyst,DataWorks,Wellington,75000,95000,Junior,"SQL;Excel;Tableau"
+2025-08-05,DevOps Engineer,CloudNZ,Christchurch,100000,140000,Senior,"AWS;Docker;Kubernetes"
+2025-08-06,Frontend Developer,PixelWave,Auckland,80000,110000,Mid,"JavaScript;React;CSS"
+2025-08-10,Data Scientist,InsightLabs,Auckland,110000,150000,Senior,"Python;Pandas;ML"
