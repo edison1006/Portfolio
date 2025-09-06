@@ -1,15 +1,15 @@
 # Productivity OS **Pro**
 
 Enhanced React productivity suite:
-- ✅ Task manager (CRUD, search, tags, priorities, due date)
-- ⏱️ Pomodoro timer (work/break, start/pause/reset)
-- 🔥 Habit tracker (7-day grid)
-- 📈 7-day activity chart (Recharts)
-- 🗒️ Quick notes (localStorage)
-- 🧩 **Kanban board** with drag-and-drop (@hello-pangea/dnd)
-- 💾 **Export/Import JSON** for tasks/habits/board/notes
-- 🌙 Light/Dark theme toggle
-- 🌐 Data Panel: GitHub user + repos fetch demo
+-  Task manager (CRUD, search, tags, priorities, due date)
+-  Pomodoro timer (work/break, start/pause/reset)
+-  Habit tracker (7-day grid)
+-  7-day activity chart (Recharts)
+-  Quick notes (localStorage)
+-  **Kanban board** with drag-and-drop (@hello-pangea/dnd)
+-  **Export/Import JSON** for tasks/habits/board/notes
+-  Light/Dark theme toggle
+-  Data Panel: GitHub user + repos fetch demo
 
 No backend required. All data persists to `localStorage`.
 
