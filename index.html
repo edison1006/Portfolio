@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edison Zhang · Portfolio</title>
+  <meta name="description" content="Finance → Software Engineering. React · Python · AWS · Azure · SQL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #60a5fa;
+      --ring: rgba(96,165,250,.35);
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --gap: 18px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text)}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:.9; text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    header.site{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(180%) blur(12px);
+      background:linear-gradient(180deg, rgba(2,6,23,.85), rgba(2,6,23,.35));
+      border-bottom:1px solid rgba(148,163,184,.12);
+    }
+    .site .bar{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .brand .dot{width:12px; height:12px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 6px var(--ring)}
+    nav a{margin-left:16px; font-weight:500}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; background:var(--accent); color:#081024; border-radius:12px; font-weight:700; border:0}
+    .btn:hover{filter:brightness(1.05); text-decoration:none}
+    .btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(148,163,184,.25)}
+
+    .hero{padding:72px 0 36px}
+    .hero .card{background:linear-gradient(180deg,rgba(17,24,39,.7),rgba(17,24,39,.5)); border:1px solid rgba(148,163,184,.2); border-radius:calc(var(--radius) + 4px); box-shadow:var(--shadow); padding:28px}
+    .hero h1{font-size:40px; line-height:1.15; margin:0 0 10px}
+    .hero p{color:var(--muted); margin:0 0 18px}
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 0}
+    .chip{padding:6px 10px; border:1px solid rgba(148,163,184,.25); border-radius:999px; color:var(--muted)}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:var(--gap)}
+    .col-4{grid-column:span 4}
+    .col-6{grid-column:span 6}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    @media (max-width: 900px){ .col-4,.col-6,.col-8{grid-column:span 12} }
+
+    .card{background:var(--card); border:1px solid rgba(148,163,184,.2); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0; color:var(--muted)}
+
+    .section{padding:28px 0}
+    .section h2{margin:0 0 14px; font-size:24px}
+
+    .projects .item{display:flex; flex-direction:column; gap:12px; padding:16px; border:1px solid rgba(148,163,184,.18); border-radius:16px; background:linear-gradient(180deg,rgba(17,24,39,.6),rgba(17,24,39,.4))}
+    .meta{display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font-size:14px}
+    .meta .dot{width:6px; height:6px; background:var(--accent); border-radius:999px; margin:8px 4px 0}
+
+    .list{display:grid; gap:14px}
+    .skill{display:flex; justify-content:space-between; align-items:center; padding:12px 14px; border:1px solid rgba(148,163,184,.18); border-radius:12px}
+
+    .timeline{border-left:2px solid rgba(148,163,184,.25); padding-left:16px}
+    .timeline .row{position:relative; margin-bottom:16px}
+    .timeline .row::before{content:""; position:absolute; left:-10px; top:6px; width:10px; height:10px; border-radius:999px; background:var(--accent); box-shadow:0 0 0 6px var(--ring)}
+
+    footer{padding:32px 0 48px; color:var(--muted)}
+
+    /* Light mode */
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fafc; --panel:#ffffff; --card:#ffffff; --text:#0b1220; --muted:#475569; --accent:#2563eb; --ring: rgba(37,99,235,.15);}
+      body{background:linear-gradient(180deg,#f1f5f9,#eef2ff)}
+      header.site{background:rgba(255,255,255,.8)}
+    }
+
+    .row-flex{display:flex; gap:10px; flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap bar">
+      <div class="brand"><span class="dot"></span> Edison Zhang</div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn ghost" href="https://github.com/edison1006" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="card">
+        <h1>Finance → Software Engineering<br/>Building data-driven products for SMEs</h1>
+        <p>Master of Software Engineering @ Yoobee (Auckland). 11y banking + analytics background. Focused on React, Python, FastAPI, Azure OCR, AWS.</p>
+        <div class="row-flex">
+          <a class="btn" href="#contact">Hire/Collaborate</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+        </div>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Vite</span>
+          <span class="chip">Python</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Azure OCR</span>
+          <span class="chip">AWS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="col-6 projects item">
+          <div>
+            <h3>SME AI Accountancy Platform</h3>
+            <p>OCR invoices → auto bank reconciliation → cashflow analytics → AI reports.</p>
+          </div>
+          <div class="meta">
+            <span>React Native · FastAPI · MongoDB · Azure OCR</span>
+            <span class="dot"></span>
+            <a href="#">Repo</a>
+            <span class="dot"></span>
+            <a href="#">Demo</a>
+          </div>
+        </article>
+        <article class="col-6 projects item">
+          <div>
+            <h3>NZ Job Market Analysis</h3>
+            <p>Scrapes/aggregates job listings, visualizes trends, and suggests skills to learn.</p>
+          </div>
+          <div class="meta">
+            <span>Python · Jupyter · D3/Matplotlib</span>
+            <span class="dot"></span>
+            <a href="#">Repo</a>
+            <span class="dot"></span>
+            <a href="#">Dashboard</a>
+          </div>
+        </article>
+        <article class="col-6 projects item">
+          <div>
+            <h3>Productivity OS Pro</h3>
+            <p>Kanban + OKRs + charts. Personal productivity system for devs.</p>
+          </div>
+          <div class="meta">
+            <span>React · Vite · Tailwind · Recharts</span>
+            <span class="dot"></span>
+            <a href="#">Repo</a>
+            <span class="dot"></span>
+            <a href="#">Live</a>
+          </div>
+        </article>
+        <article class="col-6 projects item">
+          <div>
+            <h3>Car Rental System (CLI)</h3>
+            <p>Solid OOP with Strategy/Factory patterns; SQLite backing store.</p>
+          </div>
+          <div class="meta">
+            <span>Python · SQLite · OOP</span>
+            <span class="dot"></span>
+            <a href="#">Repo</a>
+            <span class="dot"></span>
+            <a href="#">Docs</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="col-4 list">
+          <div class="skill"><span>Frontend</span><span>React · Vite</span></div>
+          <div class="skill"><span>Mobile</span><span>React Native</span></div>
+          <div class="skill"><span>Backend</span><span>FastAPI · Node</span></div>
+        </div>
+        <div class="col-4 list">
+          <div class="skill"><span>Data</span><span>Pandas · SQL</span></div>
+          <div class="skill"><span>Infra</span><span>AWS · Azure</span></div>
+          <div class="skill"><span>ML/AI</span><span>OCR · LLM</span></div>
+        </div>
+        <div class="col-4 list">
+          <div class="skill"><span>Tools</span><span>GitHub · CI/CD</span></div>
+          <div class="skill"><span>Patterns</span><span>Factory · Singleton</span></div>
+          <div class="skill"><span>Workflow</span><span>Agile · Docs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline -->
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="row">
+          <strong>2025 — Present · Volunteer Website Developer, Tiaki Taonga Trust</strong>
+          <div class="meta">AI-powered SME accountancy platform · OCR · reconciliation · analytics.</div>
+        </div>
+        <div class="row">
+          <strong>2018 — 2025 · Deputy GM (Marketing), Shanghai Pudong Development Bank</strong>
+          <div class="meta">Led growth initiatives; data-driven campaigns and partnerships.</div>
+        </div>
+        <div class="row">
+          <strong>2014 — 2018 · Customer Manager, China CITIC Bank</strong>
+          <div class="meta">Retail/SME banking; analytics; process optimization.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="grid">
+        <div class="col-8 card">
+          <p>Kia ora! I’m Edison, a finance-turned-engineer based in Auckland. I enjoy building practical data products for small businesses: automate the boring parts, surface insights, and ship clean UIs.</p>
+          <p>Currently exploring serverless analytics on AWS, Azure OCR pipelines, and LLM-assisted reporting. Open to collaboration & internships.</p>
+        </div>
+        <aside class="col-4 card">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://github.com/edison1006" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Best via email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>. I usually reply within 24–48h.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks! This is a static demo form.');" class="grid">
+          <input class="col-6 card" required placeholder="Your name" />
+          <input class="col-6 card" type="email" required placeholder="Your email" />
+          <textarea class="col-12 card" rows="5" required placeholder="Your message"></textarea>
+          <div class="col-12"><button class="btn" type="submit">Send Message</button></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="meta">© <span id="year"></span> Edison Zhang · Built with GitHub Pages</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
