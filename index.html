@@ -1,272 +1,276 @@
-<!doctype html>
+<!-- 
+  Hello 😊.
+
+  This template is designed and developed by Nisar Hassan Naqvi
+  for anyone to use for free or customize the way they like.
+
+  Github Repo: https://github.com/nisarhassan12/portfolio-template/
+  My Website: https://nisar.dev
+
+  For business & inquires, contact me => syednisarhassan12@gmail.com
+-->
+
+<!--
+  Follow the instructions written in comments to create your stunning portfolio
+-->
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xiaoyu Zhang · Portfolio</title>
-  <meta name="description" content="Xiaoyu Zhang — Software Engineer · Full-Stack & AI · Finance background" />
-  <link rel="icon" href="./assets/favicon.png" />
-  <style>
-    :root{
-      --bg:#0b0c10; --panel:#111217; --text:#e6e7ea; --muted:#9aa0a6; --brand:#4aa3ff; --brand-2:#7bd389; --card:#151823; --line:#232632;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-    /* light mode */
-    :root.light{
-      --bg:#f7f8fb; --panel:#ffffff; --text:#15171a; --muted:#5b6068; --brand:#2563eb; --brand-2:#10b981; --card:#ffffff; --line:#e9ecf1;
-      --shadow:0 8px 24px rgba(0,0,0,.08);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-    a{color:var(--brand);text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:1080px;margin:auto;padding:0 20px}
-    header{position:sticky;top:0;background:rgba(17,18,23,.7);backdrop-filter:saturate(180%) blur(10px);z-index:10;border-bottom:1px solid var(--line)}
-    :root.light header{background:rgba(255,255,255,.7)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .nav a.logo{font-weight:800;letter-spacing:.3px;color:var(--text)}
-    .nav .links{display:flex;gap:18px;align-items:center}
-    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:8px 12px;border-radius:10px;background:var(--panel);color:var(--text)}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none;color:#fff}
-    .hero{padding:84px 0 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-    .tag{display:inline-block;background:linear-gradient(135deg,var(--brand) 0,var(--brand-2) 100%);color:#fff;padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;letter-spacing:.4px}
-    h1{font-size:40px;line-height:1.15;margin:14px 0 10px}
-    .muted{color:var(--muted)}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-    .grid{display:grid;gap:16px}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
-    section{padding:32px 0}
-    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .kpi{background:var(--card);border:1px solid var(--line);padding:16px;border-radius:14px;text-align:center}
-    .kpi .n{font-size:28px;font-weight:800}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
-    .card h3{margin:0}
-    .pill{font-size:12px;color:var(--muted);border:1px dashed var(--line);padding:4px 8px;border-radius:999px}
-    .flex{display:inline-flex;gap:8px;align-items:center;vertical-align:middle}
-    .row{display:flex;gap:12px;flex-wrap:wrap}
-    .timeline{border-left:2px solid var(--line);padding-left:16px}
-    .tl-item{margin:12px 0}
-    .tl-item b{display:block}
-    footer{padding:24px 0;border-top:1px solid var(--line);color:var(--muted)}
-    /* responsive */
-    @media (max-width:960px){
-      .hero{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .kpis{grid-template-columns:1fr 1fr}
-      .nav .links{gap:12px}
-    }
-    /* icon links hover */
-    .icon-link{color:var(--text)}
-    .icon-link:hover{opacity:.9;transform:translateY(-1px)}
-    .icon{width:18px;height:18px;display:inline-block}
-    .icon.small{width:16px;height:16px}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Mohammad | A AI Developer, Researcher based in Auckland, New Zealand.
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a class="logo" href="#top">Xiaoyu</a>
-      <nav class="links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <!-- GitHub with icon -->
-        <a href="https://github.com/edison1006" target="_blank" rel="noopener me" class="flex icon-link" aria-label="GitHub: edison1006">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.74 1.26 3.41.96.1-.76.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.17a11.1 11.1 0 0 1 2.9-.39c.99 0 1.99.13 2.9.39 2.2-1.48 3.17-1.17 3.17-1.17.63 1.65.23 2.87.11 3.17.75.8 1.2 1.82 1.2 3.07 0 4.4-2.68 5.37-5.24 5.66.41.36.77 1.09.77 2.2v3.26c0 .31.21.67.8.56A10.96 10.96 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
-        <!-- LinkedIn with icon -->
-        <a href="https://www.linkedin.com/in/xiaoyu-zhang-edison" target="_blank" rel="noopener me" class="flex icon-link" aria-label="LinkedIn: Xiaoyu Zhang">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.46c.97 0 1.77-.78 1.77-1.75V1.75C24 .78 23.2 0 22.23 0zM7.12 20.45H3.55V9h3.57v11.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.41v6.31z"/>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-        <button id="themeBtn" class="btn" title="Toggle theme">🌓 Theme</button>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
       </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Mohammad</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>A AI Developer, Researcher based in Auckland, New Zealand.</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <a id="top"></a>
-  <section class="container hero">
-    <div>
-      <span class="tag">Full-Stack & AI· Auckland, NZ</span>
-      <h1>Hi, I’m <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">Xiaoyu Zhang</span>.</h1>
-      <p class="muted">Software engineer with a finance background (SPDB, CITIC). Building data & AI products: OCR → analytics → insights. Master of Software Engineering @ Yoobee (2026).</p>
-      <div class="row" style="margin-top:14px">
-        <a class="btn btn-primary" href="#projects">View Projects →</a>
-        <a class="btn" href="https://github.com/edison1006" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="./assets/EdisonZhang_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Portfolio Template</h3>
+              <p>
+                A free Open Source Portfolio for anyone to use for free.
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>JavaScript</li>
+                <li>Parcel</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Calculator</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                eius.
+              </p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node</li>
+                <li>MongoDB</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="#" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Notificator</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                eius.
+              </p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node</li>
+                <li>MongoDB</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="#" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="kpis" style="margin-top:16px">
-        <div class="kpi"><div class="n">11 yrs</div><div class="muted">Finance exp.</div></div>
-        <div class="kpi"><div class="n">30% ↑</div><div class="muted">Ops efficiency</div></div>
-        <div class="kpi"><div class="n">8+</div><div class="muted">Public projects</div></div>
+    </section>
+
+    <!-- ***** Clients ***** -->
+
+    <section class="client" id="clients">
+      <div class="row">
+        <h2>Clients</h2>
+        <div class="client__logos">
+          <!-- Add logos of the clients or companies you'have worked with. -->
+          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
+          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
+          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
+          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
+          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
+          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
+              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
+              in vel, ex quam quidem quos mollitia labore aut sunt eius
+              ratione molestiae fuga veniam facere similique voluptate.
+            </p>
+            <!-- Provide a link to your resume -->
+            <a href="#" class="btn">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Are you looking for a fast-performing and user-friendly website to
+          represent your product or business? or looking for any kind of
+          consultation? or want to ask questions? or have some advice for me
+          or just want to say "Hi 👋" in any case feel free to Let me know. I
+          will do my best to respond back. 😊 The quickest way to reach out to
+          me is via an email.
+        </p>
+        <!-- Replace the email with yours -->
+        <a href="mailto:you@example.com" class="btn">you@example.com</a>
       </div>
     </div>
-    <div class="panel">
-      <b>Now</b>
-      <ul class="muted" style="margin:8px 0 0 18px">
-        <li>Volunteering @ Tiaki Taonga Wai 262 — SME AI accountancy platform</li>
-        <li>Research — AWS Serverless for data analytics</li>
-        <li>Learning — React, FastAPI, MongoDB, Azure OCR</li>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
+            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
       </ul>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
-    <div class="section-title">
-      <h2>Projects</h2>
-      <a class="btn" href="https://github.com/edison1006?tab=repositories" target="_blank" rel="noopener">All on GitHub</a>
-    </div>
-    <div class="grid grid-3">
-      <article class="card">
-        <h3>SME AI Accountancy Platform</h3>
-        <p class="muted">OCR invoices → bank reconciliation → cash-flow dashboard → AI report generator.</p>
-        <div class="row">
-          <span class="pill">React Native</span><span class="pill">FastAPI</span><span class="pill">MongoDB</span><span class="pill">Azure OCR</span>
-        </div>
-        <div class="row">
-          <a class="btn btn-primary" href="https://github.com/edison1006" target="_blank" rel="noopener">Repo</a>
-          <a class="btn" href="#" onclick="alert('Demo URL pending');return false;">Live Demo</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>NZ Job Market Analysis</h3>
-        <p class="muted">Python data pipeline + dashboards to track NZ tech roles, skills, and salary trends.</p>
-        <div class="row">
-          <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">D3/Charts</span><span class="pill">GitHub Pages</span>
-        </div>
-        <div class="row">
-          <a class="btn btn-primary" href="https://github.com/edison1006" target="_blank" rel="noopener">Repo</a>
-          <a class="btn" href="#" onclick="alert('Live dashboard coming soon');return false;">Live Demo</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Productivity OS Pro</h3>
-        <p class="muted">Kanban + calendar + analytics with React + Vite + Tailwind. Designed for focus.</p>
-        <div class="row">
-          <span class="pill">React</span><span class="pill">Vite</span><span class="pill">Tailwind</span><span class="pill">Recharts</span>
-        </div>
-        <div class="row">
-          <a class="btn btn-primary" href="https://github.com/edison1006" target="_blank" rel="noopener">Repo</a>
-          <a class="btn" href="#" onclick="alert('Deployed soon');return false;">Live Demo</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Frontend</h3>
-        <p class="muted">HTML, CSS, JavaScript, React, Vite, Tailwind</p>
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
       </div>
-      <div class="card">
-        <h3>Backend & Data</h3>
-        <p class="muted">Python, FastAPI, C#.NET, SQL, MongoDB, AWS, Azure</p>
-      </div>
-      <div class="card">
-        <h3>Strengths</h3>
-        <p class="muted">Systems thinking, data storytelling, and product sense grounded in finance.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <b>Volunteer-Website Developer — Tiaki Taonga Wai 262</b>
-        <span class="muted">Aug 2025–present· Auckland</span>
-      </div>
-      <div class="tl-item">
-        <b>MSE — Yoobee College</b>
-        <span class="muted">2025–2026 · Auckland</span>
-      </div>
-      <div class="tl-item">
-        <b>Deputy GM of Marketing — Shanghai Pudong Development Bank</b>
-        <span class="muted">2018–2025 · Shanghai</span>
-        <div class="muted">Led growth initiatives; improved operational efficiency by 30% through data-driven workflows.</div>
-      </div>
-      <div class="tl-item">
-        <b>Customer Manager — China CITIC Bank</b>
-        <span class="muted">2014–2018 · Wuhan</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="container">
-    <div class="section-title">
-      <h2>Contact</h2>
-      <a class="btn" href="mailto:your-email@example.com">Email me</a>
-    </div>
-    <div class="panel">
-      <p>Open to AI/Full-Stack internships, freelance, and volunteer collaborations in New Zealand.</p>
-      <form onsubmit="sendMail(event)" class="grid grid-2" autocomplete="on">
-        <div><label>Name<br><input required name="name" class="panel" style="width:100%"></label></div>
-        <div><label>Email<br><input required name="email" type="email" class="panel" style="width:100%"></label></div>
-        <div style="grid-column:1/-1"><label>Message<br><textarea required name="message" rows="5" class="panel" style="width:100%"></textarea></label></div>
-        <div><button class="btn btn-primary">Send</button></div>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Xiaoyu Zhang · Built with GitHub Pages ·
-      <a href="https://github.com/edison1006" target="_blank" rel="noopener me" class="flex icon-link" aria-label="GitHub: edison1006">
-        <svg class="icon small" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.21 1.78 1.21 1.04 1.78 2.74 1.26 3.41.96.1-.76.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.2-3.07-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.17a11.1 11.1 0 0 1 2.9-.39c.99 0 1.99.13 2.9.39 2.2-1.48 3.17-1.17 3.17-1.17.63 1.65.23 2.87.11 3.17.75.8 1.2 1.82 1.2 3.07 0 4.4-2.68 5.37-5.24 5.66.41.36.77 1.09.77 2.2v3.26c0 .31.21.67.8.56A10.96 10.96 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-      ·
-      <a href="https://www.linkedin.com/in/xiaoyu-zhang-edison" target="_blank" rel="noopener me" class="flex icon-link" aria-label="LinkedIn: Xiaoyu Zhang">
-        <svg class="icon small" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.46c.97 0 1.77-.78 1.77-1.75V1.75C24 .78 23.2 0 22.23 0zM7.12 20.45H3.55V9h3.57v11.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.41v6.31z"/>
-        </svg>
-        <span>LinkedIn</span>
-      </a>
     </div>
   </footer>
 
-  <script>
-    // theme toggle (persist to localStorage)
-    const root=document.documentElement;
-    const init=()=>{ const saved=localStorage.getItem('theme'); if(saved==='light') root.classList.add('light'); };
-    init();
-    document.getElementById('themeBtn').onclick=()=>{
-      root.classList.toggle('light');
-      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
-    };
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    // very simple "mailto" sender (no backend)
-    function sendMail(e){
-      e.preventDefault();
-      const f=new FormData(e.target);
-      const subject=encodeURIComponent('Portfolio contact from '+f.get('name'));
-      const body=encodeURIComponent(`Name: ${f.get('name')}\nEmail: ${f.get('email')}\n\n${f.get('message')}`);
-      window.location.href=`mailto:your-email@example.com?subject=${subject}&body=${body}`;
-    }
-  </script>
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
 </body>
+
 </html>
